@@ -1,2 +1,5 @@
 language = "c"
 run = "gcc src/main.c -o main && ./main"
+
+[agent]
+expertMode = true

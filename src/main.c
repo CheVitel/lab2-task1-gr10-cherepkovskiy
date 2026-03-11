@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int count_ones(int num) {
     int count = 0;
@@ -23,26 +25,33 @@ void sort_by_ones(int arr[], int n) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int n;
 
-    printf("Введите размер массива n: ");
-    scanf("%d", &n);
+    if (argc == 2) {
+        n = atoi(argv[1]); 
+    } else {
+        printf("Введите размер массива n: ");
+        scanf("%d", &n); 
+    }
+
+    if (n <= 0) {
+        printf("Ошибка: размер должен быть положительным\n");
+        return 1;
+    }
 
     int arr[n];
 
-    printf("Введите %d натуральных чисел:\n", n);
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
+    srand(time(NULL)); 
 
-    printf("\nИсходный массив:\n");
+    printf("Сгенерированный массив (%d случайных чисел):\n", n);
     for (int i = 0; i < n; i++) {
+        arr[i] = rand() % 100 + 1; 
         printf("%d ", arr[i]);
     }
     printf("\n");
 
-    printf("Количество единиц в двоичной записи:\n");
+    printf("\nКоличество единиц в двоичной записи:\n");
     for (int i = 0; i < n; i++) {
         printf("%d -> %d единиц\n", arr[i], count_ones(arr[i]));
     }

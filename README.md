@@ -1,11 +1,18 @@
-# Overview
+## Overview
+Данная программа реализует сортировку массива натуральных чисел по количеству 
+единиц в двоичной записи числа. Для подсчёта единиц используется отдельная функция.
 
-It is public template of assignment `"labrabota 3"` for FPMI students
+## Usage
+1. Введите размер массива n
+2. Введите n натуральных чисел
+3. Программа выведет исходный массив, количество единиц для каждого числа
+   и отсортированный массив
 
-# Usage
+## Building
+Для компиляции программы используйте команду:
+```bash
+gcc -o labrabota2-1 /home/runner/НАЗВАНИЕ-ВАШЕГО-РЕПОЗИТОРИЯ/src/main.c
+```
 
-Please, edit README and add some details, as instance **{add your last name, first name and group number}**.
-
-# Building
-
-Please, import repository and use for repl.it project, which is defined in the assignment "labrabota 3".
+## Author
+Черепковский Виталий 10 группа

@@ -11,7 +11,9 @@
 ## Building
 Для компиляции программы используйте команду:
 ```bash
-gcc -o labrabota2-1 /home/runner/НАЗВАНИЕ-ВАШЕГО-РЕПОЗИТОРИЯ/src/main.c
+cd tpmp-lab2-task1
+make
+./bin/program
 ```
 
 ## Author
